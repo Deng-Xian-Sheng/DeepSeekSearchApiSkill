@@ -4,6 +4,14 @@
 
 让 OpenCode、Claude Code 等支持 `SKILL.md` 的 Agent 调用 DeepSeek 官方 Search / Fetch API：Search 返回结构化搜索结果，Fetch 返回 Markdown 网页正文。
 
+### 让Agent帮你安装
+
+把下面这段提示词发给你的 Agent：
+
+```text
+请帮我安装 DeepSeek Search & Fetch Skill：将 https://github.com/Deng-Xian-Sheng/DeepSeekSearchApiSkill.git 克隆到你自己的 skills 目录，目录名使用 deepseek-search（OpenCode 为 ~/.config/opencode/skills/deepseek-search，Claude Code 为 ~/.claude/skills/deepseek-search）。安装后确认 SKILL.md 存在，不要修改仓库文件。
+```
+
 安装到 OpenCode：
 
 ```bash
@@ -37,6 +45,14 @@ python3 -m unittest discover -s tests -v
 ## English
 
 An Agent Skill that lets OpenCode, Claude Code, and other `SKILL.md`-compatible agents call DeepSeek's official Search / Fetch APIs. Search returns structured results; Fetch returns page content as Markdown.
+
+### Let your agent install it
+
+Send this prompt to your agent:
+
+```text
+Install the DeepSeek Search & Fetch Skill: clone https://github.com/Deng-Xian-Sheng/DeepSeekSearchApiSkill.git into your own skills directory as deepseek-search (OpenCode: ~/.config/opencode/skills/deepseek-search; Claude Code: ~/.claude/skills/deepseek-search). Verify that SKILL.md exists and do not modify the repository files.
+```
 
 Install for OpenCode:
 
